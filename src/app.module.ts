@@ -3,9 +3,10 @@
 // アプリケーションで使用できる
 import { Module } from '@nestjs/common';
 import { ItemsModule } from './items/items.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [ItemsModule],
+  imports: [ItemsModule, TypeOrmModule.forRoot()],
   controllers: [],
   providers: [],
 })
